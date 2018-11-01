@@ -1,0 +1,12 @@
+[Unit]
+Description=Graylog Container
+After=docker.service
+Requires=docker.service
+ 
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/bin/docker start graylog
+ 
+[Install]
+WantedBy=multi-user.target

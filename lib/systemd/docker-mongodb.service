@@ -1,0 +1,12 @@
+[Unit]
+Description=NZBGet Container
+After=docker.service
+Requires=docker.service
+ 
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/bin/docker start mongo
+ 
+[Install]
+WantedBy=multi-user.target
