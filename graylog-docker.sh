@@ -24,24 +24,6 @@ do
 	CATTED_INPUT_PORTS+="-p $HOST_PORT:$PORT "
 done
 
-if [[ "$PGID" == '' ]]
-then
-        echo "Please set PGID Variable in $0"
-        exit 1
-fi
-
-if [[ "$PUID" == '' ]]
-then
-        echo "Please set PUID Variable in $0"
-        exit 1
-fi
-
-if [[ "$TZ" == '' ]]
-then
-        echo "Please set TZ Variable in $0"
-        exit 1
-fi
-
 
 ### Mongo build
 
