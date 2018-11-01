@@ -86,4 +86,4 @@ then
 fi
 
 
-docker run --name graylog --link mongo --link elasticsearch" $CATTED_PORTS" -e GRAYLOG_WEB_ENDPOINT_URI="http://127.0.0.1:9000/api" -v "$GRAYLOG_DIR/config/":/usr/share/graylog/data/config -v graylog_journal:/usr/share/graylog/data/journal  -d graylog/graylog:2.4 
+eval docker run --name graylog --link mongo --link elasticsearch "$CATTED_PORTS" -e GRAYLOG_WEB_ENDPOINT_URI="http://127.0.0.1:9000/api" -v "$GRAYLOG_DIR/config/":/usr/share/graylog/data/config -v graylog_journal:/usr/share/graylog/data/journal  -d graylog/graylog:2.4 
