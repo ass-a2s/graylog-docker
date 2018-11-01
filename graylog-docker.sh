@@ -14,7 +14,7 @@ GRAYLOG_DIR="$BASE_DIR/graylog"
 CATTED_INPUT_PORTS=''
 for PORT in "${GRAYLOG_INPUT_PORTS[@]}"
 do
-	if grep "/udp" "$PORT"
+	if echo "$PORT" | grep "/udp"
 	then
 		SUFFIX="/udp"
 		HOST_PORT=${PORT%"$SUFFIX"}
