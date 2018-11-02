@@ -75,3 +75,23 @@ Set up a cronjob to run `./graylog-docker.sh` at a specific time.
 The script will pull updated images, remove the containers and create new instances. 
 
 *Each of the containers are using volumes which will persist between instances getting upgraded -- don't worry about the containers being removed by the script.* 
+
+
+### Uninstall:
+
+```
+docker stop graylog
+docker rm graylog
+docker image rm graylog/graylog
+docker volume rm graylog_journal
+
+docker stop elasticsearch
+docker rm elasticsearch
+docker image rm elasticseach
+docker volume rm es_data
+
+docker stop mongodb
+docker rm mongo
+docker image rm mongo
+docker volume rm mongo_data
+```
