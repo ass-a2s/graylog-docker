@@ -38,6 +38,20 @@ Scripts to easily deploy Graylog using Docker using the official Graylog, Elasti
 `./graylog-docker.sh`
 
 
+### Set up each container as a systemd service:
+
+Copy each service in `./lib/systemd/` to `/etc/systemd/system/`:
+
+`sudo cp ./lib/systemd/*.service /etc/systemd/system`
+
+Enable each container to start on boot:
+
+`sudo systemctl enable docker-mongodb.service`
+
+`sudo systemctl enable docker-elasticsearch.service`
+
+`sudo systemctl enable docker-graylog.service`
+
 
 ## Access Graylog:
 
