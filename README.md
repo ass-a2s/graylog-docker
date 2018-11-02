@@ -77,7 +77,7 @@ The script will pull updated images, remove the containers and create new instan
 *Each of the containers are using volumes which will persist between instances getting upgraded -- don't worry about the containers being removed by the script.* 
 
 
-### Uninstall:
+## Uninstall:
 
 ```
 docker stop graylog
